@@ -5,7 +5,7 @@
       "id": "@id",
       "type": "@type",
       "schema": "https://schema.org/",
-      "digit": "https://raw.githubusercontent.com/Sunbird-RC/Digit-tradeLicense-demo/main/context/DIGIT_TL.json",
+      "digit": "https://raw.githubusercontent.com/Sreejit-K/Digit-tradeLicense-demo/main/context/DIGIT_TL.json",
       "DIGITTradeLicenseEvent": {
         "@id": "digit:DIGITTradeLicenseEvent",
         "@context": {

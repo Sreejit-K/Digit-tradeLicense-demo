@@ -58,7 +58,7 @@
       "credentialTemplate": {
         "@context": [
           "https://www.w3.org/2018/credentials/v1",
-          "https://raw.githubusercontent.com/Sunbird-RC/Digit-tradeLicense-demo/main/context/DIGIT_TL.json"
+          "https://raw.githubusercontent.com/Sreejit-K/Digit-tradeLicense-demo/main/context/DIGIT_TL.json"
         ],
         "type": [
           "VerifiableCredential",

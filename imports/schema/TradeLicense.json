@@ -15,7 +15,7 @@
         "$id": "#/properties/TradeLicense",
         "type": "object",
         "title": "The Service Delivery Schema",
-        "required": ["serviceDeliveryId", "beneficiary", "benefitsDelivered"],
+        "required": [],
         "properties": {
             "tradeLicenseId": {
                 "type": "string",
@@ -64,7 +64,7 @@
           "VerifiableCredential",
           "DIGITTradeLicenseEvent"
         ],
-        "id": "https://digit.org/servicedelivery/{{osid}}",
+        "id": "https://digit.org/tradelicense/{{osid}}",
         "issuer": "https://digit.org",
         "issuanceDate": "{{osUpdatedAt}}",
         "credentialSubject": {

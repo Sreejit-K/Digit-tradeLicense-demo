@@ -47,13 +47,14 @@
     "_osConfig": {
       "enableSearch": "true",
       "enableLogin": "false",
-      "indexFields": ["tradeLicenseId", "Ownername", "licenseNumber"],
+      "indexFields": ["tradeLicenseId", "ownerName", "licenseNumber"],
       "uniqueIndexFields": ["tradeLicenseId", "licenseNumber"],
       "systemFields": [
         "osCreatedAt",
         "osUpdatedAt",
         "osCreatedBy",
-        "osUpdatedBy"
+        "osUpdatedBy",
+        "_osSignedData"
       ],
       "credentialTemplate": {
         "@context": [

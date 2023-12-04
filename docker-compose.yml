@@ -72,7 +72,7 @@ services:
     ports:
       - "6379:6379"
   registry:
-    image: docker.io/subhash83925/sunbird-rc-core:elocker
+    image: ghcr.io/sunbird-rc/sunbird-rc-core:${RELEASE_VERSION}
     volumes:
       - ./${SCHEMA_DIR}:/home/sunbirdrc/config/public/_schemas
     environment:
@@ -81,8 +81,8 @@ services:
       - connectionInfo_password=${DB_PASSWORD}
       - elastic_search_auth_enabled=false
       - elastic_search_connection_url=${ES_CONNECTION_URL}
-      - authentication_enabled=true
-      - claims_enabled=true
+      - authentication_enabled=false
+      - claims_enabled=false
       - claims_url=http://localhost:8082
       - opa_allow_key_name=authorized
       - opa_enabled=false
@@ -103,7 +103,7 @@ services:
       - sunbird_sso_admin_client_secret=${KEYCLOAK_SECRET}
       - sunbird_keycloak_user_password=abcd@123
       - sunbird_keycloak_user_set_password=true
-      - logging.level.root=INFO
+      - logging.level.root=DEBUG
       - certificate_enabled=true
       - filestorage_enabled=${FILESSTORAGE_ENABLED-false}
       - filestorage_connection_url=http://file-storage:9000

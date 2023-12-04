@@ -1,0 +1,31 @@
+{
+    "@context": {
+      "@version": 1.1,
+      "@protected": true,
+      "id": "@id",
+      "type": "@type",
+      "schema": "https://schema.org/",
+      "digit": "https://raw.githubusercontent.com/Sunbird-RC/Digit-tradeLicense-demo/main/context/DIGIT_TL.json",
+      "DIGITTradeLicenseEvent": {
+        "@id": "digit:DIGITTradeLicenseEvent",
+        "@context": {
+          "id": "@id",
+          "@version": 1.1,
+          "@protected": true
+        }
+      },
+      "TradeLicense": {
+        "@id": "digit:TradeLicense",
+        "@context": {
+          "@version": 1.1,
+          "@protected": true,
+          "tradeLicenseId": "schema:Text",
+          "tradeName": "schema:Text",
+          "ownerName": "schema:Text",
+          "licenseNumber": "schema:Text",
+          "issuedDate": "schema:Text",
+          "validTo": "schema:Text"
+        }
+      }
+    }
+  }

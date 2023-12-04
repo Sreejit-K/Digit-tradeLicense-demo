@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+      "TradeLicense": {
+        "$ref": "#/definitions/TradeLicense"
+      }
+    },
+    "required": [
+      "TradeLicense"
+    ],
+    "title": "TradeLicense",
+    "definitions": {
+      "TradeLicense": {
+        "$id": "#/properties/TradeLicense",
+        "type": "object",
+        "title": "The Service Delivery Schema",
+        "required": ["serviceDeliveryId", "beneficiary", "benefitsDelivered"],
+        "properties": {
+            "tradeLicenseId": {
+                "type": "string",
+                "title": "Trade license Id"
+            },
+            "tradeName": {
+                "type": "string",
+                "title": "Trade Name"
+            }, 
+            "ownerName" : {
+                "type": "string",
+                "title": "Owner Name"
+            },
+            "licenseNumber" : {
+                "type": "string",
+                "title": "License Number" 
+            },
+            "validTo" : {
+                "type": "string",
+                "title": "Valid To"
+            },
+            "issuedDate" : {
+                "type": "string",
+                "title": "Issued Date" 
+            }
+        }
+      }
+    },
+    "_osConfig": {
+      "enableSearch": "true",
+      "enableLogin": "false",
+      "indexFields": ["tradeLicenseId", "Ownername", "licenseNumber"],
+      "uniqueIndexFields": ["tradeLicenseId", "licenseNumber"],
+      "systemFields": [
+        "osCreatedAt",
+        "osUpdatedAt",
+        "osCreatedBy",
+        "osUpdatedBy"
+      ],
+      "credentialTemplate": {
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://raw.githubusercontent.com/Sunbird-RC/Digit-tradeLicense-demo/main/context/DIGIT_TL.json"
+        ],
+        "type": [
+          "VerifiableCredential",
+          "DIGITTradeLicenseEvent"
+        ],
+        "id": "https://digit.org/servicedelivery/{{osid}}",
+        "issuer": "https://digit.org",
+        "issuanceDate": "{{osUpdatedAt}}",
+        "credentialSubject": {
+          "type": "TradeLicense",
+          "id": "did:digit/tradelicense/{{tradeLicenseId}}",
+          "tradeLicenseId": "{{tradeLicenseId}}",
+          "tradeName": "{{tradeName}}",
+          "ownerName": "{{ownerName}}",
+          "issuedDate": "{{issuedDate}}",
+          "validTo": "{{validTo}}"
+        }
+      },
+      "inviteRoles": [
+        "anonymous"
+      ],
+      "roles": [
+        "anonymous"
+      ],
+      "ownershipAttributes": [],
+      "certificateTemplates": {
+        "html": "https://raw.githubusercontent.com/Sreejit-K/Digit-tradeLicense-demo/main/imports/schema/templates/TradeLicense.html"
+      }
+    }
+  }
